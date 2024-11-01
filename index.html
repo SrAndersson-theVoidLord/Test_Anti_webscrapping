@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protección de Video, Imagen y Texto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body oncopy="return false;" oncut="return false;" onpaste="return false;">
+
+    <!-- Contenedor de la imagen con protección -->
+    <div class="image-container" oncontextmenu="return false;">
+        <div class="overlay"></div>
+    </div>
+
+    <!-- Contenedor del video protegido -->
+    <div id="videoContainer">
+        <video id="myVideo" controls autoplay></video>
+        <div class="watermark">Usuario: 12345</div>
+    </div>
+
+    <p>No es posible copiar o seleccionar este texto.</p>
+
+    <!-- Script de Shaka Player -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.10/shaka-player.compiled.js"></script>
+    <script src="scripts.js"></script>
+
+</body>
+</html>

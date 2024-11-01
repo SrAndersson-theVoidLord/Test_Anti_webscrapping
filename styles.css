@@ -1,0 +1,60 @@
+/* Estilo del contenedor de la imagen */
+.image-container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-image: url('https://via.placeholder.com/300x200');
+    background-size: cover;
+    background-position: center;
+    user-select: none; /* Evita la selección de contenido */
+}
+
+/* Capa transparente superpuesta */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    pointer-events: none; /* Permite hacer clic en la capa inferior */
+    animation: move 2s infinite;
+}
+
+/* Animación para la capa transparente */
+@keyframes move {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(5px, 5px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Contenedor del video */
+#videoContainer {
+    position: relative;
+    width: 640px;
+    height: 360px;
+    margin: auto;
+    background-color: black;
+}
+
+/* Marca de agua */
+.watermark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    pointer-events: none;
+}
+
+/* Filtro para efecto de blackout */
+.blackout {
+    filter: brightness(0%);
+}
+
+/* Desactivar selección de texto en toda la página */
+body {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard */
+}
